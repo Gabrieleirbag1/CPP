@@ -15,6 +15,11 @@ Complex2D::Complex2D(double valeur) : t_reel(valeur), t_imaginaire(valeur)
     t_imaginaire = valeur;
 }
 
+Complex2D::Complex2D(const Complex2D& complex_copy_obj) {
+    t_reel = complex_copy_obj.t_reel;
+    t_imaginaire = complex_copy_obj.t_imaginaire;
+}
+
 void Complex2D::setReel(double reel)
 {
     t_reel = reel;

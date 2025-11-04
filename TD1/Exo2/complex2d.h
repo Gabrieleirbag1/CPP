@@ -8,6 +8,7 @@ public:
     Complex2D() {};
     Complex2D(double reel, double imaginaire);
     Complex2D(double valeur);
+    Complex2D(const Complex2D& complex_copy_obj);
 
     void Complex2D::setReel(double reel);
     void Complex2D::setImaginaire(double imaginaire);
