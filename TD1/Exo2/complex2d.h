@@ -10,10 +10,17 @@ public:
     Complex2D(double valeur);
     Complex2D(const Complex2D& complex_copy_obj);
 
-    void Complex2D::setReel(double reel);
-    void Complex2D::setImaginaire(double imaginaire);
-    double Complex2D::getReel() const;
-    double Complex2D::getImaginaire() const;
+    Complex2D operator+(const Complex2D& complex_copy_obj) const;
+    Complex2D operator-(const Complex2D& complex_copy_obj) const;
+    Complex2D operator*(const Complex2D& complex_copy_obj) const;
+    Complex2D operator/(const Complex2D& complex_copy_obj) const;
+    Complex2D operator<(const Complex2D& complex_copy_obj) const;
+    Complex2D operator>(const Complex2D& complex_copy_obj) const;
+
+    void setReel(double reel);
+    void setImaginaire(double imaginaire);
+    double getReel() const;
+    double getImaginaire() const;
 
 private:
     double t_reel;
