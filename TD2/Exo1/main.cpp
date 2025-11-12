@@ -1,6 +1,7 @@
 #include<iostream>
 #include "linear_search.h"
 #include "binary_search.h"
+#include "jump_search.h"
 
 using namespace std;
 
@@ -23,6 +24,15 @@ int main() {
     std::cout << "----------------" << std::endl;
     int binary_results2 = binaryObj.search(testVector2, 4);
     linearObj.displaySearchResults(std::cout, binary_results2, 4);
+    std::cout << "----------------" << std::endl;
+
+    JumpSearch jumpObj;
+
+    int jump_results = jumpObj.search(testVector, 4);
+    linearObj.displaySearchResults(std::cout, jump_results, 4);
+    std::cout << "----------------" << std::endl;
+    int jump_results2 = jumpObj.search(testVector2, 4);
+    linearObj.displaySearchResults(std::cout, jump_results2, 4);
     std::cout << "----------------" << std::endl;
 
 
