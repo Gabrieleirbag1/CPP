@@ -2,6 +2,8 @@
 #include <cmath>
 #include "complex2d.h"
 
+Complex2D::Complex2D() {}
+
 Complex2D::Complex2D(double reel, double imaginaire) : t_reel(reel), t_imaginaire(imaginaire)
 {
     t_reel = reel;

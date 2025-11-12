@@ -4,7 +4,7 @@
 class Complex2D
 {
 public:
-    Complex2D() {};
+    Complex2D();
     Complex2D(double reel, double imaginaire);
     Complex2D(double valeur);
     Complex2D(const Complex2D& complex_copy_obj);
