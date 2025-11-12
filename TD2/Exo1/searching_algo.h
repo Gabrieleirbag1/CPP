@@ -12,7 +12,7 @@ class SearchingAlgo {
         int numberComparisons;
         static int totalComparisons;
         static int totalSearch;
-        static int averageComparisons;
+        static double averageComparisons;
 
         virtual int search(const std::vector<int> elements, int searchKey) = 0;
 

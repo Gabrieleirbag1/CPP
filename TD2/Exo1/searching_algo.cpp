@@ -2,6 +2,10 @@
 #include <iostream>
 #include "searching_algo.h"
 
+int SearchingAlgo::totalComparisons = 0;
+int SearchingAlgo::totalSearch = 0;
+double SearchingAlgo::averageComparisons = 0.0;
+
 SearchingAlgo::SearchingAlgo() {}
 
 int SearchingAlgo::search(std::vector<int> elements, int searchKey)
