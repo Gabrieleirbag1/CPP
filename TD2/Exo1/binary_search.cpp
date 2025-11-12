@@ -8,17 +8,27 @@ BinarySearch::BinarySearch() : SearchingAlgo()
 int BinarySearch::search(std::vector<int> elements, int searchKey)
 {
     numberComparisons = 0;
-    unsigned int vecSize = elements.size();
     std::sort(elements.begin(), elements.end());
-    int middleIndex = elements.size() / 2;
     
-    for (unsigned int i = middleIndex; i < vecSize; i++)
+    int left = 0;
+    int right = elements.size() - 1;
+    
+    while (left <= right)
     {
+        int middle = left + (right - left) / 2;
         numberComparisons++;
-        int element = elements[i];
-        if (element == searchKey) {
-            return i;
+        
+        if (elements[middle] == searchKey) {
+            return middle;
+        }
+        
+        numberComparisons++;
+        if (elements[middle] < searchKey) {
+            left = middle + 1;
+        } else {
+            right = middle - 1;
         }
     }
+    
     return -1;
 }
