@@ -16,12 +16,14 @@ public:
     size_t rows;
     size_t cols;
 
-    void addElement(int rowIndex, int colIndex);
-    vector<T, T> getElement(int rowIndex, int colIndex) const;
+    void addElement(size_t row, size_t col);
+    vector<T, T> getElement(size_t row, size_t col) const;
     size_t getRows() const;
     size_t getCols() const;
 
     ostream &display(ostream &os) const;
 };
+
+#include "matrix_base.tpp"
 
 #endif

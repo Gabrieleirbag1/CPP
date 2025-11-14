@@ -9,12 +9,12 @@ MatrixBase<T>::MatrixBase()
 }
 
 template <typename T>
-void MatrixBase<T>::addElement(int rowIndex, int colIndex)
+void MatrixBase<T>::addElement(size_t row, size_t col)
 {
 }
 
 template <typename T>
-vector<T, T> MatrixBase<T>::getElement(int rowIndex, int colIndex) const
+vector<T, T> MatrixBase<T>::getElement(size_t row, size_t col) const
 {
 }
 
