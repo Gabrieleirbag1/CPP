@@ -45,4 +45,12 @@ size_t MatrixBase<T>::getCols() const
 template <typename T>
 ostream &MatrixBase<T>::display(ostream &os) const
 {
+    unsigned int dataSize = data.size();
+    for (unsigned int i=0; i < dataSize; i++) {
+        unsigned int rowSize = data[i].size();
+        for (unsigned int j=0; j < rowSize; j++) {
+            os << data[i][j] << " ";
+        }
+        os << endl;
+    }
 }
