@@ -7,18 +7,21 @@ MatrixBase<T>::MatrixBase()
 }
 
 template <typename T>
-MatrixBase<T>::MatrixBase(vector<T, T>, size_t row, size_t col)
+MatrixBase<T>::MatrixBase(vector<T, T>, size_t rows, size_t cols, T value)
 {
+    data.assign(rows, vector<T>(cols, value));
 }
 
 template <typename T>
-void MatrixBase<T>::addElement(size_t row, size_t col)
+void MatrixBase<T>::addElement(size_t row, size_t col, T value)
 {
+    data[row, col] = value;
 }
 
 template <typename T>
 vector<T, T> MatrixBase<T>::getElement(size_t row, size_t col) const
 {
+    for (unsigned int i)
 }
 
 template <typename T>
