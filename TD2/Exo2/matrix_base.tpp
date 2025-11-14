@@ -35,6 +35,7 @@ vector<vector<T>> MatrixBase<T>::getElement(T value) const
             }
         }
     }
+    return vector<vector<T>>();
 }
 
 template <typename T>
@@ -62,4 +63,5 @@ ostream &MatrixBase<T>::display(ostream &os) const
         }
         os << endl;
     }
+    return os;
 }

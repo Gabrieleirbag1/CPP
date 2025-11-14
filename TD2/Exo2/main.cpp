@@ -14,6 +14,8 @@ int main() {
     vector<vector<int>> test = matrixObj2.getElement(5);
 
     matrixObj2.display(cout);
+    matrixObj2.getRows();
+    matrixObj2.getCols();
     
     return 0;
 }
