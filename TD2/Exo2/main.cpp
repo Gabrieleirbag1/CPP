@@ -11,13 +11,14 @@ int main() {
 
     matrixObj2.addElement(0, 0, 5);
 
-    int test = matrixObj2.getElement(0, 0);
+    int testElement = matrixObj2.getElement(0, 0);
 
     matrixObj2.display(cout);
-    matrixObj2.getRows();
-    matrixObj2.getCols();
 
-    cout << "Element at (0,0): " << test << endl;
+    cout << "\nTESTING METHODS" << endl;
+    cout << "getRows: " << matrixObj2.getRows() << endl;
+    cout << "getCols: " << matrixObj2.getCols() << endl;
+    cout << "getelement " << testElement << endl;
     
     return 0;
 }
