@@ -8,7 +8,7 @@
 using namespace std;
 
 template <typename T>
-class MatrixNumerical : MatrixBase<T>
+class MatrixNumerical : public MatrixBase<T>
 {
 public:
     MatrixNumerical();
