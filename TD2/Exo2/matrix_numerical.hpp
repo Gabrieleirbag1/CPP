@@ -12,9 +12,14 @@ class MatrixNumerical : public MatrixBase<T>
 {
 public:
     MatrixNumerical();
+    MatrixNumerical(std::vector<std::vector<T>> data);
     MatrixNumerical(size_t rows, size_t cols, T value);
 
     virtual T getDeterminant() const;
+
+    MatrixNumerical<T> operator+(const MatrixNumerical<T>& other) const;
+    MatrixNumerical<T> operator-(const MatrixNumerical<T>& other) const;
+    MatrixNumerical<T> operator*(const MatrixNumerical<T>& other) const;
 };
 
 #include "matrix_numerical.tpp"

@@ -27,6 +27,9 @@ int main() {
     matrixNumObj.addElement(2, 2, 2);
     matrixNumObj.addElement(3, 3, 2);
     matrixNumObj.display(cout);
+    MatrixNumerical<int> matrixAddition = matrixNumObj + matrixNumObj;
+    cout << "After Addition: " << endl;
+    matrixAddition.display(cout);
     cout << "Déterminant: " << matrixNumObj.getDeterminant() << endl << endl;
     
     return 0;

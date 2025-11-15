@@ -6,8 +6,31 @@ MatrixNumerical<T>::MatrixNumerical() : MatrixBase<T>()
 }
 
 template <typename T>
+MatrixNumerical<T>::MatrixNumerical(std::vector<std::vector<T>> data) : MatrixBase<T>(data)
+{
+}
+
+template <typename T>
 MatrixNumerical<T>::MatrixNumerical(size_t rows, size_t cols, T value) : MatrixBase<T>(rows, cols, value)
 {
+}
+
+template <typename T>
+MatrixNumerical<T> MatrixNumerical<T>::operator+(const MatrixNumerical<T> &other) const
+{
+    unsigned int dataSize = this->data.size();
+
+    std::vector<std::vector<T>> result(this->rows, std::vector<T>(this->cols, T()));
+
+    for (unsigned int i = 0; i < dataSize; i++)
+    {
+        unsigned int rowSize = this->data[i].size();
+        for (unsigned int j = 0; j < rowSize; j++)
+        {
+            result[i][j] = this->getElement(i, j) + other.getElement(i, j);
+        }
+    }
+    return MatrixNumerical<T>(result);
 }
 
 template <typename T>
