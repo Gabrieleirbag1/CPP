@@ -21,22 +21,35 @@ int main() {
 
     cout << endl << "-----------------------" << endl;
     cout << "MATRIX NUMERICAL TESTS" << endl;
+    cout << "Matrix 1: " << endl;
     MatrixNumerical<int> matrixNumObj(4, 4, 0);
     matrixNumObj.addElement(0, 0, 5);
     matrixNumObj.addElement(1, 1, 2);
     matrixNumObj.addElement(2, 2, 2);
     matrixNumObj.addElement(3, 3, 2);
     matrixNumObj.display(cout);
-    MatrixNumerical<int> matrixAddition = matrixNumObj + matrixNumObj;
-    MatrixNumerical<int> matrixSubtraction = matrixNumObj - matrixNumObj;
-    MatrixNumerical<int> matrixMultiplication = matrixNumObj * matrixNumObj;
-    cout << "After Addition: " << endl;
+
+    cout << "Matrix 2: " << endl;
+    MatrixNumerical<int> matrixNumObj2(4, 4, 0);
+    matrixNumObj2.addElement(0, 0, 8);
+    matrixNumObj2.addElement(1, 1, 3);
+    matrixNumObj2.addElement(2, 2, 2);
+    matrixNumObj2.addElement(3, 3, 9);
+    matrixNumObj2.display(cout);
+
+    MatrixNumerical<int> matrixAddition = matrixNumObj + matrixNumObj2;
+    MatrixNumerical<int> matrixSubtraction = matrixNumObj - matrixNumObj2;
+    MatrixNumerical<int> matrixMultiplication = matrixNumObj * matrixNumObj2;
+    MatrixNumerical<int> matrixDivision = matrixNumObj / matrixNumObj2;
+    cout << endl << "After Addition: " << endl;
     matrixAddition.display(cout);
     cout << "After Subtraction: " << endl;
     matrixSubtraction.display(cout);
     cout << "After Multiplication: " << endl;
     matrixMultiplication.display(cout);
-    cout << "Déterminant: " << matrixNumObj.getDeterminant() << endl << endl;
+    cout << "After Division: " << endl;
+    matrixDivision.display(cout);
+    cout << "Determinant: " << matrixNumObj.getDeterminant() << endl << endl;
 
     cout << endl << "-----------------------" << endl;
     cout << "INVERSE MATRIX TEST" << endl;
