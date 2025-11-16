@@ -37,6 +37,19 @@ int main() {
     cout << "After Multiplication: " << endl;
     matrixMultiplication.display(cout);
     cout << "Déterminant: " << matrixNumObj.getDeterminant() << endl << endl;
+
+    cout << endl << "-----------------------" << endl;
+    cout << "INVERSE MATRIX TEST" << endl;
+    MatrixNumerical<double> matrixInvObj(2, 2, 0.0);
+    matrixInvObj.addElement(0, 0, 4.0);
+    matrixInvObj.addElement(0, 1, 7.0);
+    matrixInvObj.addElement(1, 0, 2.0);
+    matrixInvObj.addElement(1, 1, 6.0);
+    cout << "Matrix to invert: " << endl;
+    matrixInvObj.display(cout);
+    MatrixNumerical<double> matrixInverse = matrixInvObj.getInverse();
+    cout << "Inverse Matrix: " << endl;
+    matrixInverse.display(cout);
     
     return 0;
 }
