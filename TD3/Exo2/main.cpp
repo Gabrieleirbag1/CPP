@@ -7,18 +7,21 @@ using namespace std;
 vector<int> twoSumBruteForce(const vector<int> &nums, int target)
 {
     // Votre code
-    for (int i = 0; i < nums.size(); i++) {
+    for (int i = 0; i < nums.size(); i++)
+    {
         int number = nums[i];
-        if (number > target) continue;
-        for (int j = 0; j < nums.size(); j++) {
+        if (number > target)
+            continue;
+        for (int j = 0; j < nums.size(); j++)
+        {
             int sum = number + nums[j];
-            if (sum == target) {
-                return vector<int> {i, j};
+            if (sum == target)
+            {
+                return vector<int>{i, j};
             }
         }
-        
     }
-    return vector<int> {50, 50};
+    return vector<int>{50, 50};
 }
 
 vector<int> twoSumOptimal(const vector<int> &nums, int target)
