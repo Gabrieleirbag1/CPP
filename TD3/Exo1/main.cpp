@@ -8,7 +8,7 @@ using namespace std;
 void countFrequencyBruteForce(const vector<int> &numbers)
 {
     vector<int> alreadySeenNumber = {};
-    bool seenNumber = false;
+    bool seenNumber;
     for (int i = 0; i < numbers.size(); i++)
     {
         seenNumber = false;
