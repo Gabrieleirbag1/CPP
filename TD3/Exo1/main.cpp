@@ -20,14 +20,20 @@ void countFrequencyBruteForce(const vector<int> &numbers)
         frequencyMap[numbers[i]] = count;
     }
 
-    for (auto &p : frequencyMap)
+    for (auto &entry : frequencyMap)
     {
-        cout << p.first << " : " << p.second << endl;
+        cout << entry.first << " : " << entry.second << endl;
     }
 }
 
 map<int, int> countFrequencyOptimal(const vector<int> &numbers)
 {
+    map<int, int> frequencyMap;
+    for (int num : numbers)
+    {
+        frequencyMap[num]++;
+    }
+    return frequencyMap;
 }
 
 int main(int argc, char const *argv[])
@@ -37,10 +43,10 @@ int main(int argc, char const *argv[])
     cout << "Frequency (Brute Foce):" << endl;
     countFrequencyBruteForce(numbers);
 
-    // cout << "\nFrequency (Optimal):" << endl;
-    // map<int, int> frequencyMapOptimal = countFrequencyOptimal(numbers);
-    // for (const auto& entry : frequencyMapOptimal) {
-    //     cout << entry.first << ": " << entry.second << " times" << endl;
-    // }
+    cout << "\nFrequency (Optimal):" << endl;
+    map<int, int> frequencyMapOptimal = countFrequencyOptimal(numbers);
+    for (const auto& entry : frequencyMapOptimal) {
+        cout << entry.first << ": " << entry.second << " times" << endl;
+    }
     return 0;
 }
