@@ -1,14 +1,18 @@
 #include <iostream>
 #include <vector>
 #include <map>
+#include <algorithm>
 
 using namespace std;
 
 void countFrequencyBruteForce(const vector<int> &numbers)
 {
-    map<int, int> frequencyMap;
+    vector<int> alreadySeenNumber = {};
+    bool seenNumber = false;
     for (int i = 0; i < numbers.size(); i++)
     {
+        seenNumber = false;
+        int number = numbers[i];
         int count = 0;
         for (int j = 0; j < numbers.size(); j++)
         {
@@ -17,12 +21,19 @@ void countFrequencyBruteForce(const vector<int> &numbers)
                 count++;
             }
         }
-        frequencyMap[numbers[i]] = count;
-    }
-
-    for (auto &entry : frequencyMap)
-    {
-        cout << entry.first << " : " << entry.second << endl;
+        for (int num : alreadySeenNumber)
+        {
+            if (num == number)
+            {
+                seenNumber = true;
+                break;
+            }
+        }
+        if (!seenNumber)
+        {
+            cout << number << " : " << count << endl;
+            alreadySeenNumber.push_back(number);
+        }
     }
 }
 
