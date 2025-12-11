@@ -7,7 +7,13 @@ class EnergyCard : public Card
 {
 public:
     EnergyCard();
-    EnergyCard(string cardName);
+    EnergyCard(string _cardName);
+
+    string getEnergyType() const;
+    void setEnergyType(string);
+
+private:
+    string energyType;
 };
 
 #endif
