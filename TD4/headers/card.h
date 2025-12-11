@@ -9,6 +9,7 @@ class Card {
         Card();
         Card(string _cardName);
 
+        string getCardName() const;
         virtual void displayInfo() const = 0;
 
     private:

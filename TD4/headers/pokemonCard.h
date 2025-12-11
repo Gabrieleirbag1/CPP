@@ -2,6 +2,7 @@
 #define POKEMON_CARD_H
 
 #include <vector>
+#include <tuple>
 #include "card.h"
 
 class PokemonCard : public Card

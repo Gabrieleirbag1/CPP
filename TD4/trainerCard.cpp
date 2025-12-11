@@ -1,4 +1,5 @@
 #include "headers/trainerCard.h"
+#include <iostream>
 
 TrainerCard::TrainerCard() : Card() {}
 
@@ -10,4 +11,8 @@ string TrainerCard::getTrainerEffect() const {
 
 void TrainerCard::setTrainerEffect(string _trainerEffect) {
     trainerEffect = _trainerEffect;
+}
+
+void TrainerCard::displayInfo() const {
+    cout << "Trainer Card - Name: " << getCardName() << ", Effect: " << trainerEffect << endl;
 }

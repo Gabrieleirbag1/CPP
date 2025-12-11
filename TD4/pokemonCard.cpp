@@ -1,4 +1,5 @@
 #include "headers/pokemonCard.h"
+#include <iostream>
 
 PokemonCard::PokemonCard() : Card() {}
 
@@ -115,4 +116,13 @@ void PokemonCard::setAttackDescription(string _attackDescription)
 void PokemonCard::setAttackDamage(int _attackDamage)
 {
     attackDamage = _attackDamage;
+}
+
+void PokemonCard::displayInfo() const {
+    cout << "Pokemon Card - Name: " << getCardName() << ", Type: " << pokemonType << ", Family: " << familyName 
+         << ", Evolution Level: " << evolutionLevel << ", HP: " << hp << "/" << maxHP << endl;
+    cout << "Attacks: " << endl;
+    for (const auto& attack : attacks) {
+        cout << "  - Cost: " << get<0>(attack) << ", Damage: " << get<1>(attack) << ", Description: " << get<2>(attack) << ", Energy: " << get<3>(attack) << endl;
+    }
 }
