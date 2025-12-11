@@ -7,13 +7,13 @@ using namespace std;
 class Card {
     public:
         Card();
+        Card(string cardName);
 
         virtual void displayInfo() const = 0;
 
     private:
         string cardName;
 
-        
 };
 
 #endif
