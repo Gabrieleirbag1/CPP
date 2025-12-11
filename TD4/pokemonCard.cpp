@@ -4,6 +4,26 @@ PokemonCard::PokemonCard() : Card() {}
 
 PokemonCard::PokemonCard(string cardName) : Card(cardName) {}
 
+PokemonCard::PokemonCard(
+    string _pokemonType,
+    string _familyName,
+    int _evolutionLevel,
+    int _maxHP, int _hp,
+    vector<tuple<int, int, string, int>> _attacks,
+    int _energyCost, int _currentEnergyCost,
+    string _attackDescription,
+    int _attackDamage)
+    : Card("Pokemon"), 
+    pokemonType(_pokemonType), 
+    familyName(_familyName), 
+    evolutionLevel(_evolutionLevel), 
+    maxHP(_maxHP), hp(_hp), 
+    attacks(_attacks), 
+    energyCost(_energyCost), 
+    currentEnergyCost(_currentEnergyCost), 
+    attackDescription(_attackDescription),
+     attackDamage(_attackDamage) {}
+
 string PokemonCard::getPokemonType() const
 {
     return pokemonType;
@@ -37,12 +57,12 @@ int PokemonCard::getCurrentEnergyCost() const
     return currentEnergyCost;
 }
 
-string PokemonCard::getAttackDescription() const 
+string PokemonCard::getAttackDescription() const
 {
     return attackDescription;
 }
 
-int PokemonCard::getAttackDamage() const 
+int PokemonCard::getAttackDamage() const
 {
     return attackDamage;
 }

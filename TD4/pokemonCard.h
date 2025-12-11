@@ -8,7 +8,8 @@ class PokemonCard : public Card
 {
 public:
     PokemonCard();
-    PokemonCard(string cardName);
+    PokemonCard(string _cardName);
+    PokemonCard(string, string, int, int, int, vector<tuple<int, int, string, int>>, int, int, string, int);
 
     string getPokemonType() const;
     string getFamilyName() const;
