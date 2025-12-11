@@ -11,6 +11,7 @@ using namespace std;
 class Player {
     public:
         Player();
+        Player(string);
         Player(string, vector<Card*>, vector<PokemonCard*>);
 
     private:
