@@ -2,6 +2,7 @@
 #define TIME_SERIES_GENERATOR_H
 
 #include <vector>
+#include <iostream>
 
 using namespace std;
 
