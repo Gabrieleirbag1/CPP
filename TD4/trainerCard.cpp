@@ -5,6 +5,8 @@ TrainerCard::TrainerCard() : Card() {}
 
 TrainerCard::TrainerCard(string _cardName) : Card(_cardName) {}
 
+TrainerCard::TrainerCard(string _cardName, string _trainerEffect) : Card(_cardName), trainerEffect(_trainerEffect) {}
+
 string TrainerCard::getTrainerEffect() const {
     return trainerEffect;
 }

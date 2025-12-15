@@ -8,6 +8,7 @@ class TrainerCard : public Card
 public:
     TrainerCard();
     TrainerCard(string _cardName);
+    TrainerCard(string _cardName, string _trainerEffect);
 
     string getTrainerEffect() const;
     void setTrainerEffect(string);
