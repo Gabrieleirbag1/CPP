@@ -1,6 +1,6 @@
 #ifndef SWIN_WAVE_GENERATOR_H
 #define SWIN_WAVE_GENERATOR_H
-#include "timeSeriesGenerator.h"
+#include "timeSeriesGenerator.hpp"
 #include <cmath>
 
 class SinWaveGenerator : public TimeSeriesGenerator {
