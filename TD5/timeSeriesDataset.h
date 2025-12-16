@@ -9,6 +9,7 @@ class TimeSeriesDataset
 {
 public:
     TimeSeriesDataset();
+    TimeSeriesDataset(bool, bool, vector<double>, vector<int>, int, int);
     
     bool getZnormalise() const;
     bool getIsTrain() const;

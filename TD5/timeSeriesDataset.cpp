@@ -1,6 +1,8 @@
 #include "timeSeriesDataset.h"
 
 TimeSeriesDataset::TimeSeriesDataset() {}
+TimeSeriesDataset::TimeSeriesDataset(bool _znormalise, bool _isTrain, vector<double> _data, vector<int> _labels, int _maxLength, int _numberOfSamples) :
+    znormalise(_znormalise), isTrain(_isTrain), data(_data), labels(_labels), maxLength(_maxLength), numberOfSamples(_numberOfSamples) {}
 
 bool TimeSeriesDataset::getZnormalise() const {
     return znormalise;
