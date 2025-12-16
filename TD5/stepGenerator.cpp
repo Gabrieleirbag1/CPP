@@ -10,8 +10,10 @@ vector<double> StepGenerator::generateTimeseries(int length) const {
 
     double currentValue = 0.0;
     for (int i = 0; i < length; ++i) {
-        if (i % 10 == 0 && i != 0) {
-            currentValue += (rand() % 3 - 1);
+        if (i != 0) {
+            if (rand() % 2 == 0) {
+                currentValue = rand() % 101;
+            }
         }
         series.push_back(currentValue);
     }
