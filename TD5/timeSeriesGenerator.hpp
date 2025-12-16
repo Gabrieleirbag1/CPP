@@ -18,4 +18,6 @@ class TimeSeriesGenerator {
         int seed;
 };
 
+#include "timeSeriesGenerator.tpp"
+
 #endif

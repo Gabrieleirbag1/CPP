@@ -39,4 +39,7 @@ private:
     int maxLength;
     int numberOfSamples;
 };
+
+#include "timeSeriesDataset.tpp"
+
 #endif

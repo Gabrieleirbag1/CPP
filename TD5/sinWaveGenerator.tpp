@@ -1,4 +1,4 @@
-#include "sinWaveGenerator.h"
+#include "sinWaveGenerator.hpp"
 
 SinWaveGenerator::SinWaveGenerator() : TimeSeriesGenerator(), amplitude(1.0), frequency(1.0), phase(0.0) {}
 

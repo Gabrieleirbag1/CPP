@@ -1,4 +1,4 @@
-#include "timeSeriesDataset.h"
+#include "timeSeriesDataset.hpp"
 
 TimeSeriesDataset::TimeSeriesDataset() {}
 TimeSeriesDataset::TimeSeriesDataset(bool _znormalise, bool _isTrain, vector<double> _data, vector<int> _labels, int _maxLength, int _numberOfSamples) :

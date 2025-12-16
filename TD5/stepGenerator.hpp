@@ -1,7 +1,7 @@
 #ifndef STEP_GENERATOR_H
 #define STEP_GENERATOR_H
 
-#include "timeSeriesGenerator.h"
+#include "timeSeriesGenerator.hpp"
 
 class StepGenerator : public TimeSeriesGenerator {
     public:
@@ -10,5 +10,7 @@ class StepGenerator : public TimeSeriesGenerator {
 
         vector<double> generateTimeseries(int) const override;
 };
+
+#include "stepGenerator.tpp"
 
 #endif

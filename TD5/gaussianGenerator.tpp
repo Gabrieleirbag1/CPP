@@ -1,4 +1,4 @@
-#include "gaussianGenerator.h"
+#include "gaussianGenerator.hpp"
 
 GaussianGenerator::GaussianGenerator() : TimeSeriesGenerator() {}
 

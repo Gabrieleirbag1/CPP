@@ -1,4 +1,4 @@
-#include <stepGenerator.h>
+#include <stepGenerator.hpp>
 
 StepGenerator::StepGenerator() : TimeSeriesGenerator() {}
 

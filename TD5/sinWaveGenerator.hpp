@@ -24,4 +24,7 @@ class SinWaveGenerator : public TimeSeriesGenerator {
         double frequency;
         double phase;
 };
+
+#include "sinWaveGenerator.tpp"
+
 #endif

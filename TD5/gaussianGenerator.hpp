@@ -1,7 +1,7 @@
 #ifndef GAUSSIAN_GENERATOR_H
 #define GAUSSIAN_GENERATOR_H
 
-#include "timeSeriesGenerator.h"
+#include "timeSeriesGenerator.hpp"
 #include <cmath>
 
 class GaussianGenerator : public TimeSeriesGenerator {
@@ -21,5 +21,7 @@ class GaussianGenerator : public TimeSeriesGenerator {
         double moyenne;
         double ecartType;
 };
+
+#include "gaussianGenerator.tpp"
 
 #endif
