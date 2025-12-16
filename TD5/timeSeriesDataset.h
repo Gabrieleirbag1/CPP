@@ -25,6 +25,8 @@ public:
     void setLabels(vector<int>);
     void setMaxLength(int);
     void setNumberOfSamples(int);
+
+    double euclidean_distance(const vector<double> distance1, const vector<double> distance2);
 private:
     bool znormalise;
     bool isTrain;

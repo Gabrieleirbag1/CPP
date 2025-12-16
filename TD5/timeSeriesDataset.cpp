@@ -1,4 +1,5 @@
 #include "timeSeriesDataset.h"
+#include <cmath>
 
 TimeSeriesDataset::TimeSeriesDataset() {}
 TimeSeriesDataset::TimeSeriesDataset(bool _znormalise, bool _isTrain, vector<double> _data, vector<int> _labels, int _maxLength, int _numberOfSamples) :
@@ -39,4 +40,13 @@ void TimeSeriesDataset::setMaxLength(int _maxLength) {
 }
 void TimeSeriesDataset::setNumberOfSamples(int _numberOfSamples) {
     numberOfSamples = _numberOfSamples;
+}
+
+double euclidean_distance(const vector<double> distance1, const vector<double> distance2 ) {
+    double sum = 0.0;
+    for (size_t i = 0; i < distance1.size(); ++i) {
+        double diff = distance1[i] - distance2[i];
+        sum += diff * diff;
+    }
+    return sqrt(sum);
 }
